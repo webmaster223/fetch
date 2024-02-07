@@ -29,7 +29,7 @@ router.get("/report/:id", (req, res) => {
 
       // Log the response data
       console.log("Response:", response.data);
-      return res.send(id, response.data);
+      return res.send(req.params);
     } catch (error) {
       // Log any errors
       console.error(
