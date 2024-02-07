@@ -27,6 +27,7 @@ router.get("/", (req, res) => {
 
       // Log the response data
       console.log("Response:", response.data);
+      return res.send(response.data);
     } catch (error) {
       // Log any errors
       console.error(
