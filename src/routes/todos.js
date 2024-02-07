@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 const base_url = "https://vault.ultimatevoip.net/stats/rest/index.php?entity=";
-router.get("/report/:id", (req, res) => {
+router.get("/report", (req, res) => {
   async function fetchAsternicReport() {
     // Encode the Asternic API URL
     console.log("param", req.params);
