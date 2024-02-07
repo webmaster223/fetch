@@ -5,8 +5,6 @@ const base_url = "https://vault.ultimatevoip.net/stats/rest/index.php?entity=";
 router.get("/report", (req, res) => {
   async function fetchAsternicReport() {
     // Encode the Asternic API URL
-    console.log("param", req.params);
-    console.log("query", req.query);
     const asternicApiUrl = base_url + "reports&start=2024-01-01&end=2024-01-31";
 
     // Define your Basic Authentication credentials
