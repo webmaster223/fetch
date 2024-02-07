@@ -1,12 +1,13 @@
 const express = require("express");
 const axios = require("axios");
 const router = express.Router();
-
-router.get("/", (req, res) => {
+const base_url = "https://vault.ultimatevoip.net/stats/rest/index.php?entity=";
+router.get("/report/:id", (req, res) => {
   async function fetchAsternicReport() {
     // Encode the Asternic API URL
-    const asternicApiUrl =
-      "https://vault.ultimatevoip.net/stats/rest/index.php?entity=reports&start=2024-01-01&end=2024-01-31";
+    console.log("param", req.params);
+    console.log("query", req.query);
+    const asternicApiUrl = base_url + "reports&start=2024-01-01&end=2024-01-31";
 
     // Define your Basic Authentication credentials
     const username = "Scott";
